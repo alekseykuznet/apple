@@ -1,0 +1,48 @@
+<?php
+return [
+    'id' => 'PornoSitesHub',
+    'name' => 'PornoSitesHub.ru',
+    'bootstrap' => [
+        'gii',
+        'debug',
+    ],
+    'modules' => [
+        'gii' => [
+            'class' => 'yii\gii\Module',
+            'allowedIPs' => ['127.0.0.1'],
+        ],
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'panels' => [
+                'clickhouse' => [
+                    'class' => 'kak\clickhouse\debug\Panel',
+                    'db' => 'clickhouse',
+                ],
+            ]
+        ],
+        'hub' => [
+            'class' => 'app\modules\hub\Module',
+        ],
+        'gridview' => [
+            'class' => 'kartik\grid\Module',
+        ]
+    ],
+    'components' => [
+        'request' => [
+            'cookieValidationKey' => 'd5e40fc87bc154082524a6f7f3a1528f',
+        ],
+        'errorHandler' => [
+            'errorAction' => 'hub/site/error',
+        ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'smtp.yandex.ru',
+                'username' => '',
+                'password' => '',
+                'port' => '465',
+            ],
+        ],
+    ],
+];

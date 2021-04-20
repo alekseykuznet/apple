@@ -1,0 +1,30 @@
+<?php
+return [
+    [
+        'class' => 'yii\log\FileTarget',
+        'levels' => ['error', 'warning', 'trace'],
+        'except' => [
+            'yii\web\HttpException:404',
+            'yii\web\HttpException:403',
+        ],
+        'maxLogFiles' => 10,
+        'maxFileSize' => 1024 * 5,
+        'logFile' => '@app/runtime/logs/app.log'
+    ],
+    [
+        'class' => 'yii\log\FileTarget',
+        'categories' => ['yii\web\HttpException:404'],
+        'logFile' => '@app/runtime/logs/404.log',
+        'levels' => ['error', 'warning'],
+        'maxFileSize' => 1024 * 5,
+        'maxLogFiles' => 5,
+    ],
+    [
+        'class' => 'yii\log\FileTarget',
+        'categories' => ['yii\web\HttpException:403'],
+        'logFile' => '@app/runtime/logs/403.log',
+        'levels' => ['error', 'warning'],
+        'maxFileSize' => 1024 * 5,
+        'maxLogFiles' => 5,
+    ],
+];

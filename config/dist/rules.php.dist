@@ -1,0 +1,6 @@
+<?php
+return [
+    '/' => '/apple/site/index',
+    '/<controller>' => '/apple/<controller>/index',
+    '/<controller>/<action>' => '/apple/<controller>/<action>',
+];

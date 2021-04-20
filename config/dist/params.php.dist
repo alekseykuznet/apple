@@ -1,0 +1,16 @@
+<?php
+
+return [
+    'noReplyEmailFrom' => '',
+    'contact' => [
+        'searchengines' => [
+            [
+                'name' => 'Searchengines',
+                'link' => 'http://searchengines.guru/showthread.php?t=947209',
+            ],
+        ],
+    ],
+    'siteUrl' => 'http://hub.loc/',
+    'linkHashSuffix' => '%2',
+    'logoPath' => '@web/resources/hub/images/logo2.png',
+];
