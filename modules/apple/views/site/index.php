@@ -18,7 +18,13 @@ use app\models\Apple;
     'dataProvider' => $provider,
     'columns' => [
         'id',
-        'color',
+        'color' => [
+            'attribute' => 'color',
+            'format' => 'raw',
+            'value' => function($model){
+                return Html::label($model->color, [], ['style'=>'color: #' . $model->color]);
+            }
+        ],
         'percent',
         'status' => [
             'attribute' => 'status',
