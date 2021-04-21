@@ -13,7 +13,7 @@ class BaseController extends Controller
 {
     use FlashTrait;
     
-    public $layout = 'main';
+    public $layout = 'guest';
 
     /**
      * @var null|User
@@ -72,23 +72,14 @@ class BaseController extends Controller
     /** @inheritdoc */
     public function beforeAction($action)
     {
-        /*
         if ($this->user !== null) {
-
-            if (!in_array($this->user->status, Partner::getActiveStatuses())) {
-                return $this->redirect(['site/logout']);
-            }
 
             $this->user->last_seen = DateTimeHelper::create(DateTimeHelper::NOW);
             $this->user->save();
-            
-            if ($this->user !== null && !in_array($this->user->status, Partner::getActiveStatuses())) {
-                \Yii::$app->user->logout();
-            }
-
         }
-        */
 
         return parent::beforeAction($action);
     }
+
+
 }

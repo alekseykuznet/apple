@@ -48,12 +48,6 @@ $form = ActiveForm::begin([
                         ['class' => 'button primary fit small'])
                     ?>
                 </li>
-                <li>
-                    <?= Html::a(\Yii::t('app', 'Registration'),
-                        ['site/registration'],
-                        ['class' => 'button primary fit small'])
-                    ?>
-                </li>
             </ul>
         </div>
     </div>

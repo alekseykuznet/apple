@@ -52,7 +52,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::t
                         </a>
 
                         <?php if (\Yii::$app->user->isGuest) : ?>
-
+                            <?= $this->render('inc/login') ?>
                         <?php else : ?>
                             <?= $this->render('inc/user') ?>
                         <?php endif; ?>
@@ -68,9 +68,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::t
                     </div>
                 </header>
 
-                <nav id="menu">
-                    <?= $this->render('inc/sidebar') ?>
-                </nav>
 
                 <div id="main">
                     <div class="inner">
