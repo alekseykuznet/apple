@@ -56,6 +56,7 @@ class Apple extends \yii\db\ActiveRecord
             [['created_at', 'updated_at'], 'safe'],
             [['color'], 'string', 'max' => 50],
             [['drop_date'], 'string'],
+            [['percent'], 'integer', 'min' => 0, 'max' => 100],
         ];
     }
 
@@ -149,7 +150,7 @@ class Apple extends \yii\db\ActiveRecord
             return false;
         }
 
-        $this->percent -= $this->percent;
+        $this->percent = $this->getOldAttributes()['percent'] - $this->percent;
         if ($this->percent === 0) {
             $this->status = self::STATUS_EATET;
         }

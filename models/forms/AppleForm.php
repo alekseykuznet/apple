@@ -14,19 +14,13 @@ class AppleForm extends Model
     public $count;
 
     /**
-     * @var integer
-     */
-    public $percent;
-
-    /**
      * @return array the validation rules.
      */
     public function rules()
     {
         return [
-            [['count', 'percent'], 'integer'],
+            [['count'], 'required'],
             [['count'], 'integer', 'min' => 0],
-            [['percent'], 'integer', 'min' => 0, 'max' => 100],
         ];
     }
 
