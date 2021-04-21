@@ -27,9 +27,6 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/png', 'href' => Url::t
     <html lang="<?= \Yii::$app->language ?>">
     <head>
         <meta charset="<?= \Yii::$app->charset ?>">
-        <meta name="keywords" content="pornomoviehub.com,pornomoviehub, porno movie hub,porn,video,videos,"/>
-        <meta name="description" content="PornoMmovieHub Free Porn Videos"/>
-        <meta name="yandex-verification" content="947b523a3551adf4" />
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
         <?= Html::csrfMetaTags() ?>
