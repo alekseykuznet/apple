@@ -1,12 +1,9 @@
 <?php
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
-use kak\widgets\panel\Panel;
 
 /** @var app\models\forms\AppleForm $appleForm */
 ?>
-
-<?php Panel::begin(['heading' => false]) ?>
 
 <?php $form = ActiveForm::begin() ?>
 <div class="row">
@@ -17,5 +14,3 @@ use kak\widgets\panel\Panel;
 
 <?= Html::submitButton(\Yii::t('app', 'generate'), ['class' => 'btn']) ?>
 <?php ActiveForm::end() ?>
-
-<?php Panel::end() ?>

@@ -23,7 +23,6 @@
         "yiisoft/yii2-httpclient": "2.0.11",
         "kartik-v/yii2-widget-select2": "^2.1",
         "yiisoft/yii2-swiftmailer": "^2.1",
-        "kak/panel": "*",
         "kartik-v/yii2-date-range": "^1.7",
         "kak/fieldset": "dev-master",
         "mranger/yii2-ckeditor": "^1.2",
