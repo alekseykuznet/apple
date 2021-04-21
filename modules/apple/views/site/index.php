@@ -9,8 +9,9 @@ use app\models\Apple;
  * @var yii\data\ActiveDataProvider $provider
  */
 ?>
-
-<?= $this->render('inc/_generate_form', compact('appleForm')) ?>
+<?php if (!\Yii::$app->user->isGuest) : ?>
+    <?= $this->render('inc/_generate_form', compact('appleForm')) ?>
+<?php endif; ?>
 <hr>
 
 <?= GridView::widget([
