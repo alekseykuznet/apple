@@ -90,9 +90,9 @@ class Apple extends \yii\db\ActiveRecord
     {
         return [
             self::STATUS_ON_TREE => Yii::t('app', 'On tree'),
-            self::STATUS_DROP => Yii::t('app', 'drop'),
+            self::STATUS_DROP => Yii::t('app', 'droped'),
             self::STATUS_ROTTEN => Yii::t('app', 'rotten'),
-            self::STATUS_EATET => Yii::t('app', 'eat'),
+            self::STATUS_EATET => Yii::t('app', 'eatet'),
         ];
     }
 

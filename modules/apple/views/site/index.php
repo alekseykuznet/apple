@@ -34,7 +34,7 @@ use app\models\Apple;
                 'template' => '{eat} {drop} {delete}',
                 'buttons' => [
                     'eat' => function ($url, $model, $key) {
-                        return Html::a(Yii::t('app', 'Eat'), [
+                        return Html::a(Yii::t('app', 'eat'), [
                             'eat',
                             'id' => $model->id,
                         ], [

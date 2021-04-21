@@ -1,7 +1,8 @@
 <?php
 return [
-    'id' => 'PornoSitesHub',
-    'name' => 'PornoSitesHub.ru',
+    'id' => 'apple',
+    'name' => 'crm.apple.com',
+    'homeUrl' => '/',
     'bootstrap' => [
         'gii',
         'debug',
@@ -14,14 +15,11 @@ return [
         'debug' => [
             'class' => 'yii\debug\Module',
             'panels' => [
-                'clickhouse' => [
-                    'class' => 'kak\clickhouse\debug\Panel',
-                    'db' => 'clickhouse',
-                ],
+
             ]
         ],
-        'hub' => [
-            'class' => 'app\modules\hub\Module',
+        'apple' => [
+            'class' => 'app\modules\apple\Module',
         ],
         'gridview' => [
             'class' => 'kartik\grid\Module',
@@ -32,7 +30,7 @@ return [
             'cookieValidationKey' => 'd5e40fc87bc154082524a6f7f3a1528f',
         ],
         'errorHandler' => [
-            'errorAction' => 'hub/site/error',
+            'errorAction' => 'apple/site/error',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

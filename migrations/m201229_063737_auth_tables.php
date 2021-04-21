@@ -207,7 +207,7 @@ class m201229_063737_auth_tables extends Migration
                 [
                     'id' => '1',
                     'username' => 'admin',
-                    'password_hash' => '$2y$11$TuvA1o.ct7J0xF.N8PrabOG3nqEELX.IlkdHoiMe5eElqXl3N2bK.',
+                    'password_hash' => '$2y$11$FhHAYs5vVToYDgLiqxsCzOdXff3F7BqrrOB.M8aJhbKV7fRUGBO0W',
                     'password_reset_token' => '',
                     'email' => 'aleksey.a.kuznecov@yandex.ru',
                     'status' => 1,

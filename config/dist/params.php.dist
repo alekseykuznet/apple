@@ -10,7 +10,7 @@ return [
             ],
         ],
     ],
-    'siteUrl' => 'http://hub.loc/',
+    'siteUrl' => 'http://crm.apple.loc/',
     'linkHashSuffix' => '%2',
-    'logoPath' => '@web/resources/hub/images/logo2.png',
+    'logoPath' => '@web/resources/apple/images/logo2.png',
 ];
