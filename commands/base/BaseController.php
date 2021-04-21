@@ -10,27 +10,11 @@ class BaseController extends Controller
     protected $timer = null;
     protected $lockHandle = null;
 
-    /** @var Connection $importDb */
-    protected $importDb = null;
-
     private const START_PARAM_VALUE = 'start';
 
     public function init()
     {
         parent::init();
-        $this->importDb = \Yii::$app->has('importdb') ? \Yii::$app->importdb: null;
-    }
-
-    /**
-     * @param string $start
-     * @return bool
-     */
-    protected function checkStartParam(string $start): bool
-    {
-        $hasStartParam = $start === self::START_PARAM_VALUE;
-        $isImportAllowed = \Yii::$app->params['allowImport'] ?? false;
-
-        return $hasStartParam && $isImportAllowed;
     }
 
     /**
